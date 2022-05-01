@@ -1,0 +1,273 @@
+:root{
+    --snow-color: rgb(255, 255, 255);  
+    --placard-color: rgb(144, 144, 149);
+  }
+  html {
+      box-sizing: border-box;
+    font-size: 16px;
+   
+       }
+  *,*::after, *::before {
+           box-sizing: inherit;
+  }
+  
+  body{
+    margin: 0;
+     padding: 0;  
+     background-color: rgb(46, 40, 70);
+     
+      }
+
+/*COKI*/
+
+.coki-back-image{
+    background-image: url("../assets/img_nieve.jpg"), url("../assets/fondo-bosque-alter3.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 96%;
+    height: 80vw;
+   border-radius: 20%;
+    background-color: white;
+    padding-top: 25%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    filter: sepia(1);
+    margin: 40% 2%;
+    
+}
+.coki-container{
+    position: relative;
+    border-radius: 3%;
+   width: 65%;
+   height: 65%;
+   border: thick solid var(--snow-color);
+   background-color: var(--placard-color);
+   margin-left: 13%;
+    padding-bottom: 15%;
+    filter: sepia(0);
+  }
+
+  .coki-puerta-iz{
+      
+      width: 45%;
+      height: 90%;
+      border-top: thick solid var(--snow-color);
+      background-color: var(--placard-color);
+      position: absolute;
+      z-index: 2;
+      left: 6.5%;
+      top: 7%;
+      
+      animation: puerta-iz-animation 196s linear both;
+      animation-play-state: paused;
+      
+  }
+
+ 
+  .coki-puerta-der{
+    
+    width: 45%;
+    height: 90%;
+    border-top: thick solid var(--snow-color);
+      background-color: var(--placard-color);
+    position: absolute;
+    z-index: 2;
+    left: 51%;
+    top: 7%;
+    animation: puerta-der-animation 196s linear both;
+    animation-play-state: paused;
+    
+}
+
+    
+@keyframes puerta-iz-animation{
+    0%{
+        transform-origin: 0%;
+        transform: perspective(800px) rotateY(0deg);
+    }
+    
+    2%{
+        transform-origin: 0%;
+        transform: perspective(800px) rotateY(-110deg);
+    }
+    25%{
+      transform-origin: 0%;
+      transform: perspective(800px) rotateY(-100deg);
+  }
+  27%{
+    transform-origin: 0%;
+    transform: perspective(800px) rotateY(-83deg);
+}
+32%{
+  transform-origin: 0%;
+  transform: perspective(800px) rotateY(-110deg);
+}
+50%{
+  transform-origin: 0%;
+  transform: perspective(800px) rotateY(-105deg);
+}
+54%{
+  transform-origin: 0%;
+  transform: perspective(800px) rotateY(-80deg);
+}
+60%{
+  transform-origin: 0%;
+  transform: perspective(800px) rotateY(-110deg);
+}
+    98%{
+      transform-origin: 0%;
+      transform: perspective(800px) rotateY(-120deg);
+  }
+  100%{
+    transform-origin: 0%;
+    transform: perspective(800px) rotateY(0deg);
+}
+}
+
+@keyframes puerta-der-animation{
+    0%{
+        transform-origin: 100%;
+        transform: perspective(800px) rotateY(0deg);
+    }
+    
+    2%{
+       transform-origin: 100%;
+       transform: perspective(800px) rotateY(110deg);
+    }
+ 
+    20%{
+      transform-origin: 100%;
+      transform: perspective(800px) rotateY(110deg);
+   }
+    
+   22%{
+    transform-origin: 100%;
+    transform: perspective(800px) rotateY(83deg);
+ }
+ 23%{
+  transform-origin: 100%;
+  transform: perspective(800px) rotateY(87deg);
+}
+25%{
+  transform-origin: 100%;
+  transform: perspective(800px) rotateY(80deg);
+}
+ 50%{
+  transform-origin: 100%;
+  transform: perspective(800px) rotateY(95deg);
+}
+
+60%{
+transform-origin: 100%;
+transform: perspective(800px) rotateY(100deg);
+}
+    98%{
+      transform-origin: 100%;
+      transform: perspective(800px) rotateY(110deg);
+   }
+    
+   100%{
+    transform-origin: 100%;
+    transform: perspective(800px) rotateY(0deg);
+ }
+}
+
+.coki-estilos{
+    width: 85%;
+    position: relative;
+    height: auto;
+    filter: sepia(0.5) saturate(1);
+   left: 8%;
+    top: 13%;
+  
+    
+  }
+
+ 
+.iframe-coki-container{
+    position: relative;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin-left: 0%;
+    margin-right: 0%;
+    transition: filter 1.5s linear;
+  
+     
+  }
+  .iframe-coki-container>*{
+   position: absolute;
+   width: 100%;      
+   height: 100%;
+   
+  }
+  .boton{
+      display: inline-block;
+      width: 15%;
+      height: 15%;
+      border: white;
+      position: relative;
+      top: 20%;
+      left: 45%;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: rgb(21, 2, 2);
+      z-index: 199;
+      padding-bottom: 1rem;
+      
+  }
+
+
+.snow-1{
+  
+  width: 200%;
+  height: 80%;
+  border-radius: 17rem 10rem;
+  background-color: rgba(220, 216, 215, 0.25);
+  filter: blur(2rem);
+  z-index: 200;
+  position: absolute;
+  top: -10%;
+  animation: cloud1 100s linear both;
+  animation-play-state: paused;
+}
+.snow-2{
+  
+  width: 200%;
+  height: 60%;
+  border-radius: 18rem 5rem;
+  background-color: rgb(208, 204, 204);
+  filter: blur(2rem);
+  z-index: 201;
+  position: absolute;
+  top: -40%;
+  animation: cloud2 100s linear 90s both;
+  animation-play-state: paused;
+}
+@keyframes cloud1{
+  0%{
+    transform: translateX(130%) translateY(0);
+  }
+  100%{
+    transform: translateX(-80%) translateY(130%);
+  }
+}
+
+@keyframes cloud2{
+  0%{
+    opacity: 0.5;
+    transform: translateX(130%) translateY(0);
+  }
+  90%{
+    transform: translateX(-40%) translateY(210%);
+    opacity: 0.5;
+  }
+  100%{
+    transform: translateX(-40%) translateY(210%);
+    opacity: 1;
+  }
+}
+.running{
+  animation-play-state: running;
+}
